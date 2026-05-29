@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유진에셋 ONE - Premium Financial Consulting Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F5F1E4', // Cream white - main color
+                        secondary: '#D9C5B4', // Light coffee stone - module background
+                        accent: '#333333', // Charcoal gray - highlights & icons
+                        neutral1: '#1A3A5C', // Deep sea blue - data labels
+                        neutral2: '#D4AF37', // Gilded gold - description text
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            }
+            .transition-custom {
+                transition: all 0.4s ease-in-out;
+            }
+            .hover-lift {
+                transform: translateY(0);
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Global Styles */
+        body {
+            background-color: #F5F1E4;
+            scroll-behavior: smooth;
+        }
+        
+        .nav-link.active {
+            color: #D4AF37;
+            border-bottom: 2px solid #D4AF37;
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm card-shadow">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-neutral1">
+                    <span class="text-neutral2">유진에셋</span> ONE
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-accent font-medium hover:text-neutral2 transition-custom">Home</a>
+                    <a href="#about" class="nav-link text-accent font-medium hover:text-neutral2 transition-custom">About Us</a>
+                    <a href="#services" class="nav-link text-accent font-medium hover:text-neutral2 transition-custom">Services</a>
+                    <a href="#insights" class="nav-link text-accent font-medium hover:text-neutral2 transition-custom">Insights</a>
+                    <a href="#contact" class="nav-link text-accent font-medium hover:text-neutral2 transition-custom">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-accent text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="md:hidden hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-accent font-medium hover:text-neutral2 transition-custom py-2">Home</a>
+                    <a href="#about" class="text-accent font-medium hover:text-neutral2 transition-custom py-2">About Us</a>
+                    <a href="#services" class="text-accent font-medium hover:text-neutral2 transition-custom py-2">Services</a>
+                    <a href="#insights" class="text-accent font-medium hover:text-neutral2 transition-custom py-2">Insights</a>
+                    <a href="#contact" class="text-accent font-medium hover:text-neutral2 transition-custom py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="py-16 md:py-24 bg-gradient-to-br from-primary to-secondary/20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral1 mb-6 leading-tight text-shadow">
+                            Premium <span class="text-neutral2">Financial</span> Consulting<br>
+                            <span class="text-neutral2">Strategic</span> Solutions
+                        </h1>
+                        <p class="text-lg text-accent mb-8 max-w-lg">
+                            Professional financial information consulting services designed to elevate your business success and financial growth.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#services" class="bg-neutral1 text-white px-8 py-3 rounded-md hover:bg-neutral1/90 transition-custom">
+                                Our Services
+                            </a>
+                            <a href="#contact" class="bg-neutral2 text-white px-8 py-3 rounded-md hover:bg-neutral2/90 transition-custom">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/74.jpg" 
+                             alt="Financial Consulting" 
+                             class="rounded-lg card-shadow hover-lift transition-custom w-full h-auto object-cover"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-neutral1 mb-4">About <span class="text-neutral2">유진에셋 ONE</span></h2>
+                    <p class="text-accent max-w-2xl mx-auto">Trusted financial consulting with global expertise and personalized solutions</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-secondary p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/75.jpg" 
+                             alt="Our Expertise" 
+                             class="w-full h-48 object-cover rounded-md mb-6"
+                             loading="lazy">
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Our Expertise</h3>
+                        <p class="text-accent">Years of experience in financial consulting, market analysis, and strategic financial planning for businesses worldwide.</p>
+                    </div>
+                    
+                    <div class="bg-secondary p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/76.jpg" 
+                             alt="Our Mission" 
+                             class="w-full h-48 object-cover rounded-md mb-6"
+                             loading="lazy">
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Our Mission</h3>
+                        <p class="text-accent">To provide exceptional financial guidance and strategic insights that drive sustainable growth and financial success.</p>
+                    </div>
+                    
+                    <div class="bg-secondary p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/77.jpg" 
+                             alt="Our Vision" 
+                             class="w-full h-48 object-cover rounded-md mb-6"
+                             loading="lazy">
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Our Vision</h3>
+                        <p class="text-accent">To be the leading global financial consulting firm, empowering businesses with innovative financial solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 bg-neutral1/5 p-8 rounded-lg">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                            <h3 class="text-2xl font-bold text-neutral1 mb-4">Company Information</h3>
+                            <p class="text-accent mb-4"><strong>Headquarters:</strong> England Peterborough 72 Park Rd</p>
+                            <p class="text-accent mb-4"><strong>Contact:</strong> +44 7685774795</p>
+                            <p class="text-accent">Established with a commitment to excellence, 유진에셋 ONE provides comprehensive financial information consulting services to clients across various industries. Our team of financial experts delivers customized solutions tailored to your specific business needs and financial objectives.</p>
+                        </div>
+                        <div class="md:w-1/3">
+                            <img src="https://amanuelgutierrez129-spec.github.io/333-19/78.jpg" 
+                                 alt="Company Office" 
+                                 class="rounded-lg w-full h-auto card-shadow"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-primary">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-neutral1 mb-4">Our <span class="text-neutral2">Services</span></h2>
+                    <p class="text-accent max-w-2xl mx-auto">Comprehensive financial consulting solutions for your business success</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <div class="text-neutral2 text-4xl mb-6"><i class="fa fa-line-chart"></i></div>
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Financial Analysis</h3>
+                        <p class="text-accent mb-4">Detailed financial analysis and reporting to help you make informed business decisions.</p>
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/79.jpg" 
+                             alt="Financial Analysis" 
+                             class="w-full h-40 object-cover rounded-md mt-4"
+                             loading="lazy">
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <div class="text-neutral2 text-4xl mb-6"><i class="fa fa-briefcase"></i></div>
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Business Consulting</h3>
+                        <p class="text-accent mb-4">Strategic business consulting services to optimize your financial performance.</p>
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/80.jpg" 
+                             alt="Business Consulting" 
+                             class="w-full h-40 object-cover rounded-md mt-4"
+                             loading="lazy">
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <div class="text-neutral2 text-4xl mb-6"><i class="fa fa-university"></i></div>
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Investment Planning</h3>
+                        <p class="text-accent mb-4">Professional investment planning and portfolio management for optimal returns.</p>
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/81.jpg" 
+                             alt="Investment Planning" 
+                             class="w-full h-40 object-cover rounded-md mt-4"
+                             loading="lazy">
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <div class="text-neutral2 text-4xl mb-6"><i class="fa fa-balance-scale"></i></div>
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Risk Management</h3>
+                        <p class="text-accent mb-4">Comprehensive risk assessment and management strategies to protect your assets.</p>
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/82.jpg" 
+                             alt="Risk Management" 
+                             class="w-full h-40 object-cover rounded-md mt-4"
+                             loading="lazy">
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <div class="text-neutral2 text-4xl mb-6"><i class="fa fa-globe"></i></div>
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Global Market Insights</h3>
+                        <p class="text-accent mb-4">Up-to-date global market information and international financial consulting.</p>
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/83.jpg" 
+                             alt="Global Market Insights" 
+                             class="w-full h-40 object-cover rounded-md mt-4"
+                             loading="lazy">
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg card-shadow hover-lift transition-custom">
+                        <div class="text-neutral2 text-4xl mb-6"><i class="fa fa-calculator"></i></div>
+                        <h3 class="text-xl font-bold text-neutral1 mb-3">Financial Planning</h3>
+                        <p class="text-accent mb-4">Customized financial planning solutions tailored to your specific business goals.</p>
+                        <img src="https://amanuelgutierrez129-spec.github.io/333-19/84.jpg" 
+                             alt="Financial Planning" 
+                             class="w-full h-40 object-cover rounded-md mt-4"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Insights Section -->
+        <section id="insights" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-neutral1 mb-4">Market <span class="text-neutral2">Insights</span></h2>
+                    <p class="text-accent max-w-2xl mx-auto">Latest financial data, market trends and expert analysis</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-secondary p-6 rounded-lg card-shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-neutral1">Financial Market Trends</h3>
+                            <span class="bg-neutral1 text-white text-sm px-3 py-1 rounded">2025</span>
+                        </div>
+                        <div class="h-48 bg-white rounded-md flex items-center justify-center mb-4">
+                            <img src="https://amanuelgutierrez129-spec.github.io/333-19/85.jpg" 
+                                 alt="Market Trends" 
+                                 class="w-full h-full object-cover rounded-md"
+                                 loading="lazy">
+                        </div>
+                        <p class="text-accent">Comprehensive analysis of current financial market trends and future projections.</p>
+                    </div>
+                    
+                    <div class="bg-secondary p-6 rounded-lg card-shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-neutral1">Investment Strategies</h3>
+                            <span class="bg-neutral2 text-white text-sm px-3 py-1 rounded">Expert</span>
+                        </div>
+                        <div class="h-48 bg-white rounded-md flex items-center justify-center mb-4">
+                            <img src="https://amanuelgutierrez129-spec.github.io/333-19/86.jpg" 
+                                 alt="Investment Strategies" 
+                                 class="w-full h-full object-cover rounded-md"
+                                 loading="lazy">
+                        </div>
+                        <p class="text-accent">Advanced investment strategies designed to maximize returns and minimize risk.</p>
+                    </div>
+                </div>
+                
+                <!-- Data Dashboard -->
+                <div class="bg-neutral1 text-white p-8 rounded-lg card-shadow">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Financial Performance Metrics</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-secondary/20 p-6 rounded-lg text-center">
+                            <h4 class="text-neutral2 font-semibold mb-2">Client Satisfaction</h4>
+                            <p class="text-3xl font-bold">98%</p>
+                        </div>
+                        <div class="bg-secondary/20 p-6 rounded-lg text-center">
+                            <h4 class="text-neutral2 font-semibold mb-2">Growth Rate</h4>
+                            <p class="text-3xl font-bold">32.5%</p>
+                        </div>
+                        <div class="bg-secondary/20 p-6 rounded-lg text-center">
+                            <h4 class="text-neutral2 font-semibold mb-2">Global Clients</h4>
+                            <p class="text-3xl font-bold">1,200+</p>
+                        </div>
+                        <div class="bg-secondary/20 p-6 rounded-lg text-center">
+                            <h4 class="text-neutral2 font-semibold mb-2">Success Rate</h4>
+                            <p class="text-3xl font-bold">99.2%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gradient-to-br from-primary to-secondary/30">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-neutral1 mb-4">Contact <span class="text-neutral2">Us</span></h2>
+                    <p class="text-accent max-w-2xl mx-auto">Get in touch with our financial consulting experts today</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-lg card-shadow">
+                        <h3 class="text-2xl font-bold text-neutral1 mb-6">Send Us a Message</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-accent font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-neutral2">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-accent font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-neutral2">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-accent font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-neutral2">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-accent font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-neutral2"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-neutral1 text-white py-3 rounded-md hover:bg-neutral1/90 transition-custom font-medium">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="successMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-md text-center">
+                            <i class="fa fa-check-circle mr-2"></i> Submitted successfully! We will contact you soon.
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-neutral1 text-white p-8 rounded-lg card-shadow mb-8">
+                            <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="text-neutral2 text-xl mr-4 mt-1"><i class="fa fa-map-marker"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold mb-1">Our Location</h4>
+                                        <p>England Peterborough 72 Park Rd</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-neutral2 text-xl mr-4 mt-1"><i class="fa fa-phone"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold mb-1">Phone Number</h4>
+                                        <p>+44 7685774795</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-neutral2 text-xl mr-4 mt-1"><i class="fa fa-envelope"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold mb-1">Email Support</h4>
+                                        <p>info@yujinassetone.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-neutral2 text-xl mr-4 mt-1"><i class="fa fa-clock-o"></i></div>
+                                    <div>
+                                        <h4 class="font-semibold mb-1">Working Hours</h4>
+                                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-lg card-shadow">
+                            <img src="https://amanuelgutierrez129-spec.github.io/333-19/87.jpg" 
+                                 alt="Office Location" 
+                                 class="w-full h-64 object-cover rounded-md"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral1 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-neutral2">유진에셋</span> ONE</h3>
+                    <p class="mb-4">Premium financial consulting services with global expertise and personalized solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-neutral2 hover:text-white transition-custom"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="text-neutral2 hover:text-white transition-custom"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="text-neutral2 hover:text-white transition-custom"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="text-neutral2 hover:text-white transition-custom"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-neutral2">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-neutral2 transition-custom">Home</a></li>
+                        <li><a href="#about" class="hover:text-neutral2 transition-custom">About Us</a></li>
+                        <li><a href="#services" class="hover:text-neutral2 transition-custom">Services</a></li>
+                        <li><a href="#insights" class="hover:text-neutral2 transition-custom">Insights</a></li>
+                        <li><a href="#contact" class="hover:text-neutral2 transition-custom">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-neutral2">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-neutral2 transition-custom">Financial Analysis</a></li>
+                        <li><a href="#" class="hover:text-neutral2 transition-custom">Business Consulting</a></li>
+                        <li><a href="#" class="hover:text-neutral2 transition-custom">Investment Planning</a></li>
+                        <li><a href="#" class="hover:text-neutral2 transition-custom">Risk Management</a></li>
+                        <li><a href="#" class="hover:text-neutral2 transition-custom">Market Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-neutral2">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>England Peterborough 72 Park Rd</li>
+                        <li>+44 7685774795</li>
+                        <li>info@yujinassetone.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral2/30 mt-8 pt-8 text-center">
+                <p>&copy; 2025 유진에셋 ONE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMessage.classList.remove('hidden');
+            contactForm.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu when link is clicked
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
